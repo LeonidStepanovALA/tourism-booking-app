@@ -2,8 +2,8 @@ services:
   - type: web
     name: tourism-booking-backend
     env: node
-    buildCommand: npm run install-all
-    startCommand: npm start
+    buildCommand: cd src && npm run install-all
+    startCommand: cd src && npm start
     envVars:
       - key: NODE_ENV
         value: production
@@ -13,8 +13,8 @@ services:
   - type: static
     name: tourism-booking-frontend
     env: static
-    buildCommand: npm run build
-    staticPublishPath: frontend/build
+    buildCommand: cd src && npm run build
+    staticPublishPath: src/frontend/build
     routes:
       - type: rewrite
         source: /*
