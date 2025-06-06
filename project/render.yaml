@@ -2,6 +2,7 @@ services:
   - type: web
     name: tourism-booking-backend
     env: node
+    runtime: node
     buildCommand: cd src && npm run install-all
     startCommand: cd src && npm start
     envVars:
