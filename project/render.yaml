@@ -2,6 +2,7 @@ services:
   - type: web
     name: tourism-booking-backend
     env: node
+    rootDir: .
     buildCommand: npm install
     startCommand: npm start
     envVars:
@@ -11,6 +12,7 @@ services:
   - type: static
     name: tourism-booking-frontend
     env: static
+    rootDir: .
     buildCommand: cd frontend && npm install && npm run build
     staticPublishPath: frontend/build
     routes:
